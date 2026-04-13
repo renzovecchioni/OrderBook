@@ -8,12 +8,15 @@ Transaction::Transaction(int buy_order_id, int sell_order_id, float execution_pr
 	    this->execution_price = execution_price;
 }
 Transaction::~Transaction(){}
+// retorna o getter do Transaction.buy_order_id()
 int Transaction::getBuyOrderId() const {
     return buy_order_id;
 }
+//retorna o getter do Transaction.sell_order_id()
 int Transaction::getSellOrderId() const {
     return sell_order_id;
 }
+// retorna o getter do execution_price()
 float Transaction::getExecutionPrice() const {
     return execution_price;
 }

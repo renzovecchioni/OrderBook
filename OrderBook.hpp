@@ -29,7 +29,7 @@ public:
     bool submit(Order order);
     bool cancel(int id);
 
-
+    
     Order* getBuyOrders(int* n);
     Order* getSellOrders(int* n);
     Transaction* getTransactions(int* n);

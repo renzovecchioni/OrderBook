@@ -29,14 +29,85 @@ Após compilar, execute:
 
 # Uma breve explicação de como os dados estão organizados internamente no sistema.
 
-
+O sistema implementado organiza internamente as informações por meio de três estruturas principais: ordens de compra (buyOrders), ordens de venda (sellOrders) e transações realizadas (transactions). Todas essas estruturas são armazenadas em arrays dinâmicos alocados na heap, o que permite que o sistema cresça conforme novas ordens são inseridas, sem depender de um tamanho fixo definido em tempo de compilação.
 
 # Saída esperada
 
 Ao rodar o programa, o sistema processa as ordens e apresenta o resultado de cada operação realizada. A seguir, é mostrado um exemplo de saída produzido pelo `main.cpp`.
 
 ```text
+Buy Orders: 
+(empty)
+Sell Orders:
+[2 | 100 | 23]
+Transactions:
+(empty)
+1
 
-lorem
+Buy Orders:
+(empty)
+Sell Orders:
+(empty)
+Transactions:
+[1, 2, 120]
+1
+
+Buy Orders:
+[3 | 100 | 35]
+Sell Orders:
+(empty)
+Transactions:
+[1, 2, 120]
+1
+
+Buy Orders:
+[3 | 100 | 35]
+[4 | 90 | 56]
+Sell Orders:
+(empty)
+Transactions:
+[1, 2, 120]
+1
+
+Buy Orders:
+[3 | 100 | 35]
+[4 | 90 | 56]
+[5 | 100 | 78]
+Sell Orders:
+(empty)
+Transactions:
+[1, 2, 120]
+1
+
+Buy Orders:
+[4 | 90 | 56]
+[5 | 100 | 78]
+Sell Orders:
+(empty)
+Transactions:
+[1, 2, 120]
+[3, 6, 80]
+1
+
+Buy Orders:
+[4 | 90 | 56]
+Sell Orders:
+(empty)
+Transactions:
+[1, 2, 120]
+[3, 6, 80]
+[5, 7, 100]
+1
+
+Quantidade de Ordens de compra 1
+1
+Buy Orders:
+(empty)
+Sell Orders:
+(empty)
+Transactions:
+[1, 2, 120]
+[3, 6, 80]
+[5, 7, 100]
 
 ```
