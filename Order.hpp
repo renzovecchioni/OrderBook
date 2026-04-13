@@ -11,9 +11,8 @@ private:
     char type; // 'B' ou 'S'
     float price;
     int timestamp;
-
 public:
-
+    Order() = default;
     Order(int id, char type, float price, int timestamp);
     ~Order();
     int getId() const;
